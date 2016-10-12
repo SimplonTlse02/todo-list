@@ -4,23 +4,31 @@ console.log("Start");
 // Les tâches "non cochées s'affichent"
 // Les tâches cochées disparaissent
 $('#todoBtn').click(function(){
-	console.log('click TODO');
-	$('input[type="checkbox"]:checked').parent('li').hide();
-	$('input[type="checkbox"]:not(:checked)').parent('li').show();
+	// console.log('click TODO');
+	getDoneTasks().hide();
+	getTodoTasks().show();
 });
 
 // Quand je clique sur le btn 'Faites'
 // affiches les tâches cochées
 // cache les tâches non cochées
 $('#doneBtn').click(function(){
-	console.log('click DONE');
-	$('input[type="checkbox"]:checked').parent('li').show();
-	$('input[type="checkbox"]:not(:checked)').parent('li').hide();
+	// console.log('click DONE');
+	getDoneTasks().show();
+	getTodoTasks().hide();
 });
 
 // Voir tout
 $('#allBtn').click(function(){
-	console.log('minuscule');
-	$('input[type="checkbox"]:checked').parent('li').show();
-	$('input[type="checkbox"]:not(:checked)').parent('li').show();
+	// console.log('minuscule');
+	getDoneTasks().show();
+	getTodoTasks().show();
 })
+
+function getDoneTasks(){
+	return $('input[type="checkbox"]:checked').parent('li');
+}
+
+function getTodoTasks(){
+	return $('input[type="checkbox"]:not(:checked)').parent('li');
+}
