@@ -19,12 +19,6 @@ $('#doneBtn').click(function(){
 	getTodoTasks().hide();
 });
 
-// Voir tout
-$('#allBtn').click(function(){
-	// console.log('minuscule');
-	getDoneTasks().show();
-	getTodoTasks().show();
-})
 
 function getDoneTasks(){
 	return $('input[type="checkbox"]:checked').parent('li');
