@@ -1,5 +1,6 @@
 console.log("Start");
 
+
 // Quand je clique sur le btn "A faire"
 // Les tâches "non cochées s'affichent"
 // Les tâches cochées disparaissent
@@ -32,3 +33,31 @@ function getDoneTasks(){
 function getTodoTasks(){
 	return $('input[type="checkbox"]:not(:checked)').parent('li');
 }
+
+
+
+
+/*
+
+Qd je clique sur Ajouter,
+- ajouter une tâche à ma liste : content + checkbox
+
+var newTask = $('<li> '+ content + '<input type="checkbox"></li>');
+...append(newTask);
+newTask.click(function(){
+	// toggleClass
+})
+
+- ajouter un listener à cette nouvelle tâche
+
+newTask.on('click', function({
+	
+}))
+
+Délégation d'évèenemtn
+
+$('ul').on('click', 'input[type=checkbox]', function(){
+	// $(this)
+
+});
+*/
