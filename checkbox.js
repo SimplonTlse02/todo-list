@@ -2,6 +2,7 @@
 // Sélection des cb non-checkées
 console.log("Checkbox");
 
+
 $('#submitBtn').click(function(){
 	console.log('submit');
 
